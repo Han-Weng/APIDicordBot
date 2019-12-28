@@ -1,0 +1,23 @@
+{
+  "name": "sabd",
+  "version": "0.0.1",
+  "description": "Test",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "aa",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/polyfill": "^7.7.0",
+    "discord-handles": "^7.3.5",
+    "discord.js": "^11.5.1",
+    "es6-promise": "^4.2.8",
+    "isomorphic-fetch": "^2.2.1",
+    "jQuery": "^1.7.4",
+    "jquery": "^3.4.1",
+    "node-fetch": "^2.6.0",
+    "whatwg-fetch": "^3.0.0"
+  },
+  "devDependencies": {}
+}
