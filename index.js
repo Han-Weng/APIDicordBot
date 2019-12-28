@@ -41,7 +41,7 @@ bot.on('message', async message => {
         message.channel.sendMessage(myJsonDog.message);
         break;
 
-      case 'wiki':
+      case 'define':
           var word= args[1];
 
           if (args.length ==3){
