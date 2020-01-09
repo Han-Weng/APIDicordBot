@@ -1,4 +1,4 @@
-const token='NjU5ODE0MzI0NTU4MTAyNTQx.Xhay-Q.YadP5ZsHX7LMo4BYuQNV4Kb-yo4';
+
 const Discord= require('discord.js');
 const bot = new Discord.Client();
 const PREFIX =  '!';
@@ -12,7 +12,7 @@ const dog = 'https://dog.ceo/api/breeds/image/random';
 const wiki='https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro&explaintext&redirects=1&titles=a';
 
 bot.on('ready',async () => {
-  console.log('Destiny arrives all the same. And now, its here. Or should I say, I am.');
+  console.log(Math.random()*5);
 
 });
 
@@ -21,13 +21,12 @@ bot.on('message', async message => {
 
 
   switch(args[0]){
-
     case 'dance':
     var minDance=1;
     var maxDance=5;
-    const randomDance =Math.floor(Math.random(minDance) * Math.floor(maxDance));
+    const randomDance =Math.floor(Math.random(1,5) * Math.floor(maxDance));
 
-    message.channel.sendMessage(new Discord.Attachment('./dance/'+randomDance+'.gif', '1.gif') )
+    message.channel.sendMessage(new Discord.Attachment('./dance/'+randomDance+'.gif', (randomDance+'.gif')) )
 .catch(console.error);
 
     case 'reddit':
