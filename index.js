@@ -1,12 +1,10 @@
-
+const token='NjU5ODE0MzI0NTU4MTAyNTQx.Xhay-Q.YadP5ZsHX7LMo4BYuQNV4Kb-yo4';
 const Discord= require('discord.js');
 const bot = new Discord.Client();
-const token = 'NjU5ODE0MzI0NTU4MTAyNTQx.Xgauhw.DjissG9Je0dQ2nNB8IJlkLBr6mo';
 const PREFIX =  '!';
-const api='https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro&explaintext&redirects=1&titles=';
+
 bot.login(token);
 const fs= require("fs");
-
 const fetch = require('node-fetch')
 
 const cat ='https://aws.random.cat/meow';
@@ -14,7 +12,6 @@ const dog = 'https://dog.ceo/api/breeds/image/random';
 const wiki='https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro&explaintext&redirects=1&titles=a';
 
 bot.on('ready',async () => {
-
   console.log('Destiny arrives all the same. And now, its here. Or should I say, I am.');
 
 });
@@ -24,6 +21,29 @@ bot.on('message', async message => {
 
 
   switch(args[0]){
+
+    case 'dance':
+    var minDance=1;
+    var maxDance=5;
+    const randomDance =Math.floor(Math.random(minDance) * Math.floor(maxDance));
+
+    message.channel.sendMessage(new Discord.Attachment('./dance/'+randomDance+'.gif', '1.gif') )
+.catch(console.error);
+
+    case 'reddit':
+      var min=0;
+      var max=25;
+      const random =Math.floor(Math.random() * Math.floor(max));
+
+      const reddit ='https://www.reddit.com/r/'+args[1].toUpperCase()+'/top/.json'
+
+      const fetchReddit =  await fetch(reddit);
+      const myJsonReddit =  await fetchReddit.json();
+      const image =myJsonReddit.data.children[random].data.url;
+
+      message.channel.sendMessage(image);
+
+      break;
     case 'shit':
         message.channel.sendMessage("In all my years of conquest, violence, slaughter, it was never personal. But I'll tell you now, what I'm about to do to you "+(message.author.username)+"... Im gonna enjoy it. Very, very much.");
         break;
