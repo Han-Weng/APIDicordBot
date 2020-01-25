@@ -9,3 +9,4 @@ Github and Discord can detect legal tokens
 !cat for cat images
 !wiki (word) for short wiki summaries
 !reddit (subreddit) for reddit images or posts
+!dance for random images of dancing Pepe
