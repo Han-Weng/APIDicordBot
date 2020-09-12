@@ -16,7 +16,7 @@
     "isomorphic-fetch": "^2.2.1",
     "jQuery": "^1.7.4",
     "jquery": "^3.4.1",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^2.6.1",
     "whatwg-fetch": "^3.0.0"
   },
   "devDependencies": {}
